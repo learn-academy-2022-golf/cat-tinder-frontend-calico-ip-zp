@@ -25,7 +25,7 @@ const Footer = () => {
   >
     <NavbarBrand href="/">
       <img
-        // alt="logo"
+        alt="Calico logo"
         src="/logo.svg"
         style={{
           height: 40,
