@@ -9,11 +9,14 @@ import CatShow from './pages/CatShow';
 import CatEdit from './pages/CatEdit';
 import NotFound from './pages/NotFound';
 import { Routes, Route } from 'react-router-dom'
-
 import mockCats from "./mockCats"
 
 const App = () => {
   const [cats, setCats] = useState(mockCats)
+
+const createCat = (cat) => {
+  console.log("Cat creation", cat);
+}
 
   return (
 <>
@@ -22,7 +25,7 @@ const App = () => {
   <Route path="/" element={<Home />} />
   <Route path="/catindex" element={<CatIndex cats={cats} />} />
   <Route path="/catshow/:id" element={<CatShow cats={cats} />} />
-  <Route path="/catnew" element={<CatNew />} />
+  <Route path="/catnew" element={<CatNew createCat={createCat} />} />
   <Route path="/catedit" element={<CatEdit />} />
   <Route path="*" element={<NotFound />} />
 </Routes>
