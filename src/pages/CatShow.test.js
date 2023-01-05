@@ -23,10 +23,13 @@ describe("<CatShow />", () => {
     render(
       <MemoryRouter initialEntries={["/catshow/1"]}>
       <Routes>
-         <Route path="catshow/:id" element={<Card />} />
+         <Route path="catshow/:id" element={<CatShow cats={mockCats} />} />
         </Routes>
        </MemoryRouter>,
        div)
+
+        const catName = screen.getByText("Morgan")
+        expect(catName).toBeInTheDocument()
 
 
   })
