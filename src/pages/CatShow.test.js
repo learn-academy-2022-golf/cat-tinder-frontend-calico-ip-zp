@@ -28,33 +28,7 @@ describe("<CatShow />", () => {
        </MemoryRouter>,
        div)
 
-       const CatShow = ({ cats }) => {
-        const { id } = useParams()
-        let currentCat = cats?.find((cat) => cat.id === +id)
-      
-      
-      
-        return (
-          <>
-            <Card
-              style={{
-                width: "14rem"
-              }}
-              key={id}
-            >
-              <img alt={`profile of a currentCat named ${currentCat.name}`} src={currentCat.image} />
-              <CardBody>
-               <p><CardTitle tag="h5">{currentCat.name}</CardTitle></p> 
-                <CardSubtitle className="mb-2 text-muted" tag="h6">
-                  <p>Age: {currentCat.age}</p>
-                  <p>Enjoys: {currentCat.enjoys}</p>
-                </CardSubtitle>
-      
-              </CardBody>
-            </Card>
-          </>
-        )
-      }
+
   })
 
 })
